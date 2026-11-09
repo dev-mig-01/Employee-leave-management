@@ -78,7 +78,8 @@ python project for leave management of employees .
                 view_balance(emp_id)
         
             elif choice == "3":
-                print("Exiting Application.")
+                print("Exiting Application.") 
+                break
  
             else:
                 print("Invalid choice. Please select 1, 2, or 3.")
