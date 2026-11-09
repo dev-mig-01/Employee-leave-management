@@ -29,7 +29,7 @@ python project for leave management of employees .
 
     def apply_leave(emp_id, leave_type, from_str, to_str):
         emp_id = emp_id.strip()
-        leave_type = leave_type.strip()
+        leave_type = leave_type.strip().capitalize()
 
         emp = employees[emp_id]
         if leave_type not in emp["balances"]:
@@ -65,7 +65,7 @@ python project for leave management of employees .
             print("3: Exit")
             choice = input("Enter choice (1-3): ").strip()
 
-            if choice == 1:
+            if choice == "1":
                 emp_id = input("Enter Employee ID(eg: E101): ")
                 leave_type = input("Enter Leave Type:(Casual/Sick/Earned): ")
                 print("#Enter date in format: YYYY-MM-DD.")
@@ -73,11 +73,11 @@ python project for leave management of employees .
                 to_date = input("Enter To Date: ")
                 apply_leave(emp_id, leave_type, from_date, to_date)
 
-            elif choice == 2:
+            elif choice == "2":
                 emp_id = input("Enter Employee ID(eg: E101): ")
                 view_balance(emp_id)
         
-            elif choice == 3:
+            elif choice == "3":
                 print("Exiting Application.")
  
             else:
